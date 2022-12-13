@@ -7,16 +7,16 @@ class CustomCardPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
+        title: const Text(
           "Custom Card",
           style: TextStyle(color: Colors.white),
         ),
-        backgroundColor: Color(0xFF8C062F),
+        backgroundColor: const Color(0xFF8C062F),
       ),
       body: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [
                   Color(0xFFFE5788),
@@ -37,7 +37,7 @@ class CustomCardPage extends StatelessWidget {
                   Opacity(
                     opacity: 0.05,
                     child: Container(
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                           image: DecorationImage(
                               image:
                                   AssetImage("assets/images/water_pattern.png"),
@@ -49,7 +49,7 @@ class CustomCardPage extends StatelessWidget {
                       Flexible(
                         flex: 1,
                         child: Container(
-                          decoration: BoxDecoration(
+                          decoration: const BoxDecoration(
                             borderRadius: BorderRadius.only(
                               topLeft: Radius.circular(4),
                               topRight: Radius.circular(4),
@@ -63,11 +63,11 @@ class CustomCardPage extends StatelessWidget {
                       Flexible(
                         flex: 1,
                         child: Container(
-                          margin: EdgeInsets.fromLTRB(20, 50, 20, 20),
+                          margin: const EdgeInsets.fromLTRB(20, 50, 20, 20),
                           child: Column(
                             // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
+                              const Text(
                                 "Beautiful Sunset at Pangandaran Beach",
                                 maxLines: 2,
                                 style: TextStyle(
@@ -78,7 +78,7 @@ class CustomCardPage extends StatelessWidget {
                                 textAlign: TextAlign.center,
                               ),
                               Container(
-                                margin: EdgeInsets.fromLTRB(0, 20, 0, 15),
+                                margin: const EdgeInsets.fromLTRB(0, 20, 0, 15),
                                 child: Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
@@ -104,14 +104,14 @@ class CustomCardPage extends StatelessWidget {
                               Row(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Spacer(flex: 10),
+                                  const Spacer(flex: 10),
                                   Icon(
                                     Icons.thumb_up,
                                     color: Colors.grey[400],
                                     size: 18.0,
                                   ),
                                   // SizedBox(width: 5),
-                                  Spacer(flex: 1),
+                                  const Spacer(flex: 1),
                                   Text(
                                     "99",
                                     style: TextStyle(
@@ -121,13 +121,13 @@ class CustomCardPage extends StatelessWidget {
                                     ),
                                   ),
                                   // SizedBox(width: 50),
-                                  Spacer(flex: 5),
+                                  const Spacer(flex: 5),
                                   Icon(
                                     Icons.comment,
                                     color: Colors.grey[400],
                                     size: 18.0,
                                   ),
-                                  Spacer(flex: 1),
+                                  const Spacer(flex: 1),
                                   Text(
                                     "888",
                                     style: TextStyle(
@@ -136,7 +136,7 @@ class CustomCardPage extends StatelessWidget {
                                       fontWeight: FontWeight.w500,
                                     ),
                                   ),
-                                  Spacer(flex: 10),
+                                  const Spacer(flex: 10),
                                 ],
                               ),
                             ],

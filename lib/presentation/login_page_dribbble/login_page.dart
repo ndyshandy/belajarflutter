@@ -15,7 +15,7 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFEEEEEE),
+      backgroundColor: const Color(0xFFEEEEEE),
       body: Stack(
         children: [
           Positioned(
@@ -24,7 +24,7 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
             child: Container(
               width: getSmallCircle(context),
               height: getSmallCircle(context),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     Color(0xFFB226B2),
@@ -41,18 +41,9 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
             left: -getBigCircle(context) / 4,
             top: -getBigCircle(context) / 4,
             child: Container(
-              child: Center(
-                child: Text(
-                  "dribbble",
-                  style: TextStyle(
-                      fontSize: 35,
-                      color: Colors.white,
-                      fontFamily: "Pacifico"),
-                ),
-              ),
               width: getBigCircle(context),
               height: getBigCircle(context),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
                     Color(0xFFB226B2),
@@ -63,6 +54,15 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
                 ),
                 shape: BoxShape.circle,
               ),
+              child: const Center(
+                child: Text(
+                  "dribbble",
+                  style: TextStyle(
+                      fontSize: 35,
+                      color: Colors.white,
+                      fontFamily: "Pacifico"),
+                ),
+              ),
             ),
           ),
           Positioned(
@@ -71,7 +71,7 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
             child: Container(
               width: getBigCircle(context),
               height: getBigCircle(context),
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xFFF3E9EE),
                 shape: BoxShape.circle,
               ),
@@ -85,15 +85,15 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
                   color: Colors.white,
                   border: Border.all(color: Colors.grey),
                 ),
-                margin: EdgeInsets.fromLTRB(20, 300, 20, 10),
-                padding: EdgeInsets.fromLTRB(10, 0, 10, 25),
+                margin: const EdgeInsets.fromLTRB(20, 300, 20, 10),
+                padding: const EdgeInsets.fromLTRB(10, 0, 10, 25),
                 child: Column(
                   children: [
                     methodTextField(
                         ikon: Icons.email,
                         labelteks: "Email:",
                         obSecureText: false),
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
                     methodTextField(
                         ikon: Icons.vpn_key,
                         labelteks: "Password:",
@@ -104,8 +104,8 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
               Align(
                 alignment: Alignment.centerRight,
                 child: Container(
-                  margin: EdgeInsets.fromLTRB(0, 0, 20, 20),
-                  child: Text(
+                  margin: const EdgeInsets.fromLTRB(0, 0, 20, 20),
+                  child: const Text(
                     "FORGOT PASSWORD?",
                     style: TextStyle(
                       color: Color(0xFFFF4891),
@@ -115,7 +115,7 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.fromLTRB(20, 0, 20, 30),
+                margin: const EdgeInsets.fromLTRB(20, 0, 20, 30),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -123,25 +123,9 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
                       width: MediaQuery.of(context).size.width / 2,
                       height: 40,
                       child: Container(
-                        child: Material(
-                          borderRadius: BorderRadius.circular(20),
-                          color: Colors.transparent,
-                          child: InkWell(
-                            borderRadius: BorderRadius.circular(20),
-                            splashColor: Colors.amber,
-                            onTap: () {},
-                            child: Center(
-                                child: Text(
-                              "SIGN IN",
-                              style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                  color: Colors.white),
-                            )),
-                          ),
-                        ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          gradient: LinearGradient(
+                          gradient: const LinearGradient(
                             colors: [
                               Color(0xFFB226B2),
                               Color(0xFFFF4891),
@@ -150,13 +134,29 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
                             end: Alignment.bottomCenter,
                           ),
                         ),
+                        child: Material(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Colors.transparent,
+                          child: InkWell(
+                            borderRadius: BorderRadius.circular(20),
+                            splashColor: Colors.amber,
+                            onTap: () {},
+                            child: const Center(
+                                child: Text(
+                              "SIGN IN",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.white),
+                            )),
+                          ),
+                        ),
                       ),
                     ),
                     FloatingActionButton(
                       mini: true,
                       elevation: 0,
                       onPressed: () {},
-                      child: Image(
+                      child: const Image(
                         image: AssetImage("assets/images/fb.png"),
                       ),
                     ),
@@ -164,7 +164,7 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
                       mini: true,
                       elevation: 0,
                       onPressed: () {},
-                      child: Image(
+                      child: const Image(
                         image: AssetImage("assets/images/twitter.png"),
                       ),
                     ),
@@ -174,7 +174,7 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     "DON'T HAVE AN ACCOUNT?",
                     style: TextStyle(
                       fontSize: 12,
@@ -184,7 +184,7 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
                   ),
                   TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       "SIGN UP",
                       style: TextStyle(
                           fontSize: 12,
@@ -211,15 +211,15 @@ class _DribbbleLoginPageState extends State<DribbbleLoginPage> {
       decoration: InputDecoration(
         icon: Icon(
           ikon,
-          color: Color(0xFFFF4891),
+          color: const Color(0xFFFF4891),
         ),
-        focusedBorder: UnderlineInputBorder(
+        focusedBorder: const UnderlineInputBorder(
           borderSide: BorderSide(
             color: Color(0xFFFF4891),
           ),
         ),
         labelText: labelteks,
-        labelStyle: TextStyle(
+        labelStyle: const TextStyle(
           color: Color(0xFFFF4891),
         ),
       ),

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 class SecondPage extends StatelessWidget {
@@ -7,14 +9,14 @@ class SecondPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Second Page"),
+        title: const Text("Second Page"),
       ),
       body: Center(
         child: RaisedButton(
           onPressed: () {
             Navigator.pop(context);
           },
-          child: Text("BACK"),
+          child: const Text("BACK"),
         ),
       ),
     );

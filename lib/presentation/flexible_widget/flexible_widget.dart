@@ -7,7 +7,7 @@ class FlexiblePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Flexible Layout"),
+        title: const Text("Flexible Layout"),
       ),
       body: Column(
         children: [
@@ -18,21 +18,21 @@ class FlexiblePage extends StatelessWidget {
                 Flexible(
                   flex: 1,
                   child: Container(
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     color: Colors.red,
                   ),
                 ),
                 Flexible(
                   flex: 1,
                   child: Container(
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     color: Colors.green,
                   ),
                 ),
                 Flexible(
                   flex: 1,
                   child: Container(
-                    margin: EdgeInsets.all(5),
+                    margin: const EdgeInsets.all(5),
                     color: Colors.purple,
                   ),
                 ),
@@ -42,14 +42,14 @@ class FlexiblePage extends StatelessWidget {
           Flexible(
             flex: 2,
             child: Container(
-              margin: EdgeInsets.all(5),
+              margin: const EdgeInsets.all(5),
               color: Colors.yellow,
             ),
           ),
           Flexible(
             flex: 1,
             child: Container(
-              margin: EdgeInsets.all(5),
+              margin: const EdgeInsets.all(5),
               color: Colors.blue,
             ),
           ),

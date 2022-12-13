@@ -7,7 +7,7 @@ class MyNewStackPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Stack Page"),
+        title: const Text("My Stack Page"),
       ),
       body: Stack(
         children: [
@@ -18,7 +18,7 @@ class MyNewStackPage extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     color: Colors.grey[350],
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                       bottomLeft: Radius.circular(50),
                       bottomRight: Radius.circular(50),
                     ),
@@ -37,8 +37,8 @@ class MyNewStackPage extends StatelessWidget {
           Column(
             children: [
               Container(
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.all(15),
+                margin: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(15),
                 height: 220,
                 decoration: BoxDecoration(
                   color: Colors.green[200],
@@ -54,7 +54,7 @@ class MyNewStackPage extends StatelessWidget {
                         width: 100,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
-                          image: DecorationImage(
+                          image: const DecorationImage(
                             fit: BoxFit.fitHeight,
                             image: NetworkImage(
                                 "https://images.genpi.co/uploads/data/images/idaman(1).png"),
@@ -62,16 +62,16 @@ class MyNewStackPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10),
+                    const SizedBox(width: 10),
                     Flexible(
                       flex: 2,
-                      child: Container(
+                      child: SizedBox(
                         // color: Colors.blue,
                         // width: double.infinity,
                         height: 100,
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
+                          children: const [
                             Text(
                               "Yasmin Dyah",
                               style: TextStyle(fontSize: 25),

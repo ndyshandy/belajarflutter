@@ -13,24 +13,32 @@ class _ContohTextFieldState extends State<ContohTextField> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Latihan Text Field"),
+        title: const Text("Latihan Text Field"),
       ),
       body: Container(
-        margin: EdgeInsets.all(20),
+        margin: const EdgeInsets.all(20),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             TextField(
-              decoration: InputDecoration(prefixIcon: Icon(Icons.person)),
+              decoration: const InputDecoration(prefixIcon: Icon(Icons.person)),
               maxLength: 18,
               onChanged: (value) {
                 setState(() {});
               },
               controller: textController,
             ),
+            const SizedBox(height: 10),
+            const Text(
+              "Silahkan input teks",
+              style: TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey),
+            ),
+            const SizedBox(height: 20),
             Text(
               textController.text,
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
+              style: const TextStyle(fontSize: 40, fontWeight: FontWeight.bold),
             ),
           ],
         ),

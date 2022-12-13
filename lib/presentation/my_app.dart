@@ -1,6 +1,8 @@
-import 'package:aplikasi_hello_world/presentation/hero_clipRRect/first_page_hero.dart';
-import 'package:aplikasi_hello_world/presentation/login_page_dribbble/login_page.dart';
+import 'package:aplikasi_hello_world/presentation/animated_container/animated_container.dart';
+import 'package:aplikasi_hello_world/presentation/custom_card/custom_card.dart';
+import 'package:aplikasi_hello_world/presentation/home/home_page.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class MyApp extends StatefulWidget {
   const MyApp({Key key}) : super(key: key);
@@ -12,13 +14,19 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      initialRoute: '/',
+      getPages: [
+        GetPage(name: '/', page: () => const HomePage()),
+        GetPage(name: '/animated', page: () => const AnimatedContainerPage()),
+        GetPage(name: '/customcard', page: () => const CustomCardPage()),
+      ],
       title: 'Belajar Flutter With Erico Darmawan',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FirstPageHero(),
+      home: const HomePage(),
     );
   }
 }

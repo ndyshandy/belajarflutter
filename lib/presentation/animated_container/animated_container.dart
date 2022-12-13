@@ -16,7 +16,7 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Animated Container Page"),
+        title: const Text("Animated Container Page"),
       ),
       body: Center(
         child: GestureDetector(
@@ -30,7 +30,7 @@ class _AnimatedContainerPageState extends State<AnimatedContainerPage> {
               random.nextInt(256),
               random.nextInt(256),
             ),
-            duration: Duration(seconds: 1),
+            duration: const Duration(seconds: 1),
             width: 50.0 + random.nextInt(101),
             height: 50.0 + random.nextInt(101),
           ),

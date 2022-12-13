@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 
 class StackAlignPage extends StatelessWidget {
@@ -7,7 +9,7 @@ class StackAlignPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Stack dan Align"),
+        title: const Text("Stack dan Align"),
       ),
       body: Stack(
         children: [
@@ -56,9 +58,9 @@ class StackAlignPage extends StatelessWidget {
           ListView(
             children: [
               Container(
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 child: Column(
-                  children: [
+                  children: const [
                     Text(
                       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque dolor arcu, semper vel accumsan sed, ultricies a est. Curabitur a dui mi. Donec id nunc eu diam commodo auctor eget non mi. Nullam sed enim ligula. Suspendisse convallis eu ex suscipit tempus. Maecenas semper orci risus, et rutrum orci blandit id. Maecenas eu lectus vitae augue convallis egestas. Suspendisse metus risus, varius quis tellus quis, malesuada egestas est. Donec sagittis purus a consectetur posuere. Vivamus consectetur, turpis fermentum tincidunt dignissim, mi ex porta arcu, id tempor quam est quis nisl. Vivamus mi nibh, convallis in aliquet vel, vestibulum ut velit.",
                       style: TextStyle(fontSize: 20),
@@ -79,11 +81,11 @@ class StackAlignPage extends StatelessWidget {
           ),
           Align(
             // x= negatif ke kiri, positif ke kanan: y= negatif ke atas, positif ke bawah: 0= di tengah
-            alignment: Alignment(0, 0.9),
+            alignment: const Alignment(0, 0.9),
             child: RaisedButton(
               onPressed: () {},
-              child: Text("Button"),
               color: Colors.amber,
+              child: const Text("Button"),
             ),
           ),
         ],

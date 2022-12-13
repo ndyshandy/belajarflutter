@@ -12,7 +12,7 @@ class _MediaQueryPageState extends State<MediaQueryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Media Query or Responsive"),
+        title: const Text("Media Query or Responsive"),
       ),
       body: Stack(children: [
         (MediaQuery.of(context).orientation == Orientation.portrait)

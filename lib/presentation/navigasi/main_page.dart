@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:aplikasi_hello_world/presentation/navigasi/login_page.dart';
 import 'package:aplikasi_hello_world/presentation/navigasi/second_page.dart';
 import 'package:flutter/material.dart';
@@ -9,17 +11,17 @@ class MainPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
+        leading: const Icon(
           Icons.adb,
           color: Colors.white,
         ),
-        title: Text("Main Page"),
+        title: const Text("Main Page"),
         actions: [
-          IconButton(onPressed: () {}, icon: Icon(Icons.settings)),
-          IconButton(onPressed: () {}, icon: Icon(Icons.exit_to_app)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.settings)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.exit_to_app)),
         ],
         flexibleSpace: Container(
-          decoration: BoxDecoration(
+          decoration: const BoxDecoration(
               gradient: LinearGradient(
                 colors: [Color(0xff0096ff), Color(0xff6610f2)],
                 begin: FractionalOffset.topLeft,
@@ -39,7 +41,7 @@ class MainPage extends StatelessWidget {
             height: 200,
             width: double.infinity,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                   bottomLeft: Radius.circular(30),
                   bottomRight: Radius.circular(30)),
               color: Colors.deepPurple[200],
@@ -48,7 +50,7 @@ class MainPage extends StatelessWidget {
           ListView(
             children: [
               Container(
-                margin: EdgeInsets.only(
+                margin: const EdgeInsets.only(
                   top: 10,
                   left: 10,
                   right: 10,
@@ -56,9 +58,9 @@ class MainPage extends StatelessWidget {
                 child: Card(
                   elevation: 5,
                   child: Container(
-                    padding: EdgeInsets.all(10),
+                    padding: const EdgeInsets.all(10),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(Icons.account_box),
                         SizedBox(width: 5),
                         Text("Account Box"),
@@ -68,20 +70,20 @@ class MainPage extends StatelessWidget {
                 ),
               ),
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 10),
+                margin: const EdgeInsets.symmetric(horizontal: 10),
                 child: Card(
                   elevation: 5,
                   child: Container(
                     height: 200,
-                    padding: EdgeInsets.all(10),
-                    child: Text("Shandy Mulyajaya"),
+                    padding: const EdgeInsets.all(10),
+                    child: const Text("Shandy Mulyajaya"),
                   ),
                 ),
               ),
             ],
           ),
           Align(
-            alignment: Alignment(0, 0.9),
+            alignment: const Alignment(0, 0.9),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -91,13 +93,14 @@ class MainPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SecondPage()),
+                        MaterialPageRoute(
+                            builder: (context) => const SecondPage()),
                       );
                     },
-                    child: Text("SECOND PAGE"),
+                    child: const Text("SECOND PAGE"),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 SizedBox(
@@ -106,10 +109,11 @@ class MainPage extends StatelessWidget {
                     onPressed: () {
                       Navigator.pushReplacement(
                         context,
-                        MaterialPageRoute(builder: (context) => LoginPage()),
+                        MaterialPageRoute(
+                            builder: (context) => const LoginPage()),
                       );
                     },
-                    child: Text("LOG OUT"),
+                    child: const Text("LOG OUT"),
                   ),
                 ),
               ],
