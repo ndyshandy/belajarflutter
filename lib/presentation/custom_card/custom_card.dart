@@ -58,6 +58,10 @@ class CustomCardPage extends StatelessWidget {
                                 image: AssetImage("assets/images/sunset2.jpg"),
                                 fit: BoxFit.cover),
                           ),
+                          // child: Image(
+                          //   image: AssetImage('assets/images/sunset2.jpg'),
+                          //   fit: BoxFit.cover,
+                          // ),
                         ),
                       ),
                       Flexible(
