@@ -4,6 +4,7 @@ import 'package:aplikasi_hello_world/presentation/animated_container/animated_co
 import 'package:aplikasi_hello_world/presentation/appbar/appbar_custom_size.dart';
 import 'package:aplikasi_hello_world/presentation/audio_player/audio_player.dart';
 import 'package:aplikasi_hello_world/presentation/button_transform/button_transform.dart';
+import 'package:aplikasi_hello_world/presentation/clip_path/clip_path.dart';
 import 'package:aplikasi_hello_world/presentation/custom_card/custom_card.dart';
 import 'package:aplikasi_hello_world/presentation/flexible_widget/flexible_widget.dart';
 import 'package:aplikasi_hello_world/presentation/gradient_opacity/gradient_opacity.dart';
@@ -124,6 +125,10 @@ class HomePage extends StatelessWidget {
                 ElevatedButton(
                   onPressed: () => Get.to(const AudioPlayerPage()),
                   child: const Text("Audio Player Page"),
+                ),
+                ElevatedButton(
+                  onPressed: () => Get.to(const ClipPathPage()),
+                  child: const Text("Clip Path Page"),
                 ),
               ],
             ),
