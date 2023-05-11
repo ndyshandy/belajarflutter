@@ -1,3 +1,4 @@
+import 'package:aplikasi_hello_world/presentation/audio_player/audio_button.dart';
 import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class AudioPlayerPage extends StatefulWidget {
 }
 
 class _AudioPlayerPageState extends State<AudioPlayerPage> {
+  bool toggle = false;
   AudioPlayer audioPlayer;
   String durasi = "00:00:00";
 
@@ -43,6 +45,16 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
+              // IconButton(
+              //     onPressed: () {
+              //       setState(() {
+              //         playSound("https://s3.vinhostmedia.com:10945/;");
+              //         toggle = !toggle;
+              //       });
+              //     },
+              //     icon: toggle
+              //         ? Icon(Icons.pause_circle)
+              //         : Icon(Icons.play_circle)),
               IconButton(
                 onPressed: () {
                   playSound("https://s3.vinhostmedia.com:10945/;");
@@ -73,7 +85,7 @@ class _AudioPlayerPageState extends State<AudioPlayerPage> {
               Text(
                 durasi,
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
-              )
+              ),
             ],
           ),
         ),
